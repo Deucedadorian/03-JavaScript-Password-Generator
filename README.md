@@ -13,8 +13,7 @@ For this project, I used javascript to create a function which would ask the use
 ## Table of contents
 
 - [Usage](#usage)
-- [Credits](credits)
-- [License](#license)
+- [Credits](#credits)
 - [Screenshots](#screenshots)
 
 ## Usage
@@ -27,6 +26,7 @@ Most of the code in this app was given as starter code. I only created the funct
 
 ## Screenshots
 
-![Screenshot of deployed app](/Assets/_C__Users_Dylan_repos_Homework_03-JavaScript-Password-Generator_index.html.png)
+![Screenshot of app before generated password](Assets/03-javascript-homework-demo.png)
 
-![Screenshot of deployed app](/Assets/03-javascript-homework-demo.png)
+![Screenshot of deployed app after generated password](Assets/_C__Users_Dylan_repos_Homework_03-JavaScript-Password-Generator_index.html.png)
+
