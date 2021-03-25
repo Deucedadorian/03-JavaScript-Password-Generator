@@ -6,18 +6,21 @@ function generatePassword() {
     'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm',
     'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z',
   ];
+
   let uppercaseCharacters = [
     'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M',
     'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z',
   ];
+
   let numbers = [ 
     '9', '8', '7', '6', '5', '4', '3', '2', '1', '0',
-  ]
+  ];
+
   let specialCharacters = [
     "+", "-", "&", "|", "!", "(", ")", "{", "}", "[", "]", "^", "~",
     "*", "?", ":","\"","\\", "@", "#", "$", "%", "'", ",", ".", "_",
     "/", ";", "<", ">", "`", 
-  ]
+  ];
 
   // asks user how long they want their password to be
   let passwordLength = Number(window.prompt("how long do you want you password to be? Please enter a number between 8 and 128:"));
@@ -34,22 +37,22 @@ function generatePassword() {
 
   // asks if the user wants uppercase, lowercase, numbers and specialCharacters 
   // in their password
-  let isLowercase = window.confirm("Do you want lowercase characters in you password?");
-  let isUppercase = window.confirm("Do you want uppercase characters in you password?");
-  let isNumbers = window.confirm("Would you like numbers to be included in you password?");
+  let isLowercase = window.confirm("Do you want lowercase characters in your password?");
+  let isUppercase = window.confirm("Do you want uppercase characters in your password?");
+  let isNumbers = window.confirm("Would you like numbers to be included in your password?");
 
   // If they don't want uppercase, lowercase or numbers in their PW,
   // the password is generated with just special characters
   if (isLowercase === false && isUppercase === false && isNumbers === false) {
     isSpecialCharacters = true;
   } else {
-    isSpecialCharacters = window.confirm("Would you like special characters in you password?");
+    isSpecialCharacters = window.confirm("Would you like special characters in your password?");
   }
 
   // declaring array of possible characters
   let possibleCharacters = [];
 
-  // builds array of possible characters
+  // builds array of possible characters and stores them in possibleCharacters
   if (isLowercase === true) {
     Array.prototype.push.apply(possibleCharacters, lowercaseCharacters);
   }
@@ -62,7 +65,9 @@ function generatePassword() {
   if (isSpecialCharacters === true) {
     Array.prototype.push.apply(possibleCharacters, specialCharacters)
   }
+
   let password = [];
+
   // places a random character from possibleCharacters to the index i of password
   for (let i = 0; i < passwordLength; i++) {
     let index = Math.floor(Math.random() * possibleCharacters.length);
