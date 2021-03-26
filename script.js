@@ -33,7 +33,7 @@ function generatePassword() {
   if (
     (passwordLength < 8) ||
     (passwordLength > 128) ||
-    (nonNumeric.test(passwordLength) === true)
+    (nonNumeric.test(passwordLength))
   ) {
     window.alert("Invalid input.");
     return;
